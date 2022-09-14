@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - debugging example
  * Return: 0
