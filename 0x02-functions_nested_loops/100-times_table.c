@@ -7,9 +7,8 @@
   *
   *Return: Returns multiplicaation table starting from 0
   */
-int main(void)
+void print_times_table(int n)
 {
-	int n;
 	int res, max, a, b;
 
 	if ((n >= 0) && (n <= 15))
