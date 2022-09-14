@@ -1,11 +1,13 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - debugging example
- * Return: 0
- */
+  * main - Entry point of the program"
+  *
+  * Return: Always returns 0(success)
+  */
 int main(void)
 {
-    printf("_putchar\n");
-    return (0);
+	printf("_putchar\n");
+	return (0);
 }
