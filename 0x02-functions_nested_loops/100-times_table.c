@@ -1,47 +1,49 @@
 #include "main.h"
-
 /**
-  * print_times_table - display times table
-  *
-  * @n: number parameter
-  *
-  *Return: Returns multiplicaation table starting from 0
-  */
-void times_table_pr(int n)
-{
-	int res, max, a, b;
+ * print_times_table - prints times table
+ * @n : times table to use
+ * Return: void
+ */
 
-	if ((n >= 0) && (n <= 15))
+void print_times_table(int n)
+{
+	int a = 0, rep, b;
+
+	if (n < 0 || n > 15)
+		return;
+
+	while (a <= n)
 	{
-		for (a = 0; a <= n; a++)
+		for (b = 0; b <= n; b++)
 		{
-			_putchar(48);
-			for (b = 1; b <= n; b++)
+			rep = a * b;
+			if  (b == 0)
+				_putchar('0' + rep);
+			else if (rep < 10)
 			{
-				res = a * b;
+				_putchar(' ');
+				_putchar(' ');
+				_putchar('0' + rep);
+			}
+			else if (rep < 100)
+			{
+				_putchar(' ');
+				_putchar('0' + rep / 10);
+				_putchar('0' + rep % 10);
+			}
+			else
+			{
+				_putchar('0' + rep / 100);
+				_putchar('0' + (rep - 100) / 10);
+				_putchar('0' + rep % 10);
+			}
+			if (b < n)
+			{
 				_putchar(',');
 				_putchar(' ');
-				if (res < 10)
-				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(res % 10 + '0');
-				}
-				else if (res >= 100)
-				{
-					max = res / 10;
-					_putchar(max / 10 + '0');
-					_putchar(max % 10 + '0');
-					_putchar(res % 10 + '0');
-				}
-				else
-				{
-					_putchar(' ');
-					_putchar(res / 10 + '0');
-					_putchar(res % 10 + '0');
-				}
 			}
-			_putchar(10);
 		}
+		_putchar('\n');
+		a++;
 	}
 }
