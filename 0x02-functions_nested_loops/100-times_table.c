@@ -7,7 +7,7 @@
   *
   *Return: Returns multiplicaation table starting from 0
   */
-void times_table(int n)
+void times_table_print(int n)
 {
 	int res, max, a, b;
 
