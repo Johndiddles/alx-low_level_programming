@@ -1,34 +1,30 @@
 #include "main.h"
 
 /**
- *
- *
- *
- *
- *
- */
-
+  * more_numbers - function that prints the aphpabets
+  *
+  * Return: Always return 0 on success
+  *
+  */
 void more_numbers(void)
 {
 	int i;
-	int j;
+	char n, num;
 
-	for(i = 0; i < 10; i++){
-		j = 0
-		while (j <= 14)
+	for (i = 1; i <= 10; i++)
+	{
+		num = 0;
+		while (num <= 14)
 		{
-			if (j <= 9)
+			n = num;
+			if (n >= 10)
 			{
-				_putchar('0' + j);
+				_putchar('1');
+				n = n % 10;
 			}
-			else
-			{
-				_putchar('0' + j / 10);
-				_putchar('0' + j % 10);
-			}
-			j++;
+			_putchar('0' + n);
+			num++;
 		}
-		_putchar('\n');
-		i++;
-	}	
-}
+		_putchar(10);
+	}
+}}
