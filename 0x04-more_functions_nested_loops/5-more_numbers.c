@@ -8,7 +8,7 @@
  *
  */
 
-int more_numbers()
+void more_numbers(void)
 {
 	int i;
 	int j;
