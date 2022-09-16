@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- *print_line - check args for an int
- *
- *@n - int passed into print_line();
- *
- */
-
+  * print_line - function that prints line on the terminal
+  *
+  * @n: length of the line
+  * Return: Always return 0 on success
+  *
+  */
 void print_line(int n)
 {
 	int line;
