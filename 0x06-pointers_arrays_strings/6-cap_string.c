@@ -1,41 +1,33 @@
 #include "main.h"
 
 /**
- * *cap_string - capitalizes all words of a string.
+ * cap_string - Function that reverses the content of an array of integers.
  *
- * @str: hold character.
- * Return: string.
+ * @s: s is the array
+ *
+ * Return: Always 0.
  */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (s[i] != '\0')
 	{
-		if (i == 0)
+		if (s[0] <= 122 && s[0] >= 97)
 		{
-			if ((str[i] >= 97 && str[i] <= 122))
+			s[0] = s[0] - 32;
+		}
+		if (s[i] == 32 || s[i] == 46 || s[i] == '\t' ||
+			s[i] == '\n' || s[i] == 44 || s[i] == 59 ||
+				s[i] == '!' || s[i] == '?' || s[i] == '(' ||
+				s[i] == ')' || s[i] == '{' || s[i] == '}')
+		{
+			if (s[i + 1] <= 122 && s[i + 1] >= 97)
 			{
-				str[i] = str[i] - 32;
-				continue;
+				s[i + 1] = s[i + 1] - 32;
 			}
 		}
-		else if (str[i] == ' ')
-		{
-			++i;
-			if (str[i] >= 97 && str[i] <= 122)
-			{
-				str[i] = str[i] - 32;
-				continue;
-			}
-		}
-		else
-		{
-			if (str[i] >= 65 && str[i] <= 90)
-			{
-				str[i] = str[i] + 32;
-			}
-		}
+	i++;
 	}
-	return (str);
+	return (s);
 }
